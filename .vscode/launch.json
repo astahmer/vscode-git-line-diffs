@@ -8,14 +8,20 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": [
-				"--extensionDevelopmentPath=${workspaceRoot}"
+			  "--disable-updates",
+			  "--disable-workspace-trust",
+			  "--profile-temp",
+			  "--skip-release-notes",
+			  "--skip-welcome",
+			  "--extensionDevelopmentPath=${workspaceFolder}",
+			//   "--folder-uri=${workspaceFolder}"
 			],
 			"stopOnEntry": false,
 			"sourceMaps": true,
 			"outFiles": [
-				"${workspaceRoot}/dist/**/*.js"
+			  "${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "npm: watch"
+			// "preLaunchTask": "npm: watch"
 		}
 	]
 }

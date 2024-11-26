@@ -1,22 +1,16 @@
 {
 	"compilerOptions": {
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"target": "es2022",
-		"allowJs": true,
-		"resolveJsonModule": true,
-		"moduleDetection": "force",
-		"isolatedModules": true,
-		"verbatimModuleSyntax": true,
+		"module": "commonjs",
+		"target": "es2020",
+		"lib": ["es2020", "DOM"],
+		"outDir": "out",
+		"sourceMap": true,
 		"strict": true,
-		"noUncheckedIndexedAccess": true,
-		"noImplicitOverride": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"noEmit": false,
-		"outDir": "dist",
-		"lib": ["es2022"],
-		"incremental": true
+		"rootDir": "src",
+		"skipLibCheck": true
 	},
-	"exclude": ["node_modules"]
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
 }

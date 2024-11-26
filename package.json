@@ -1,10 +1,24 @@
 {
   "name": "vscode-git-status-infos",
-  "type": "module",
-  "main": "./dist/extension.js",
+  "publisher": "astahmer",
+  "displayName": "Git Status Infos",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./out/extension.js",
   "engines": {
 		"vscode": "^1.73.0"
 	},
+  "activationEvents": [
+		"*"
+	],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.showChangedFiles",
+        "title": "Show Changed Files"
+      }
+    ]
+  },
   "scripts": {
 		"vscode:prepublish": "npm run build",
 		"build": "tsc -p ./",
