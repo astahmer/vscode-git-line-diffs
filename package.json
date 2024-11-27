@@ -1,7 +1,7 @@
 {
-  "name": "vscode-git-status-infos",
+  "name": "vscode-git-line-diffs",
   "publisher": "astahmer",
-  "displayName": "Git Status Infos",
+  "displayName": "Git Line Diffs",
   "version": "0.0.1",
   "private": true,
   "main": "./out/extension.js",
@@ -14,13 +14,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.showChangedFiles",
-        "title": "Show Changed Files"
+        "command": "git-line-diffs.openDashboard",
+        "title": "GitLineDiffs: Open Dashboard"
       }
     ]
   },
   "scripts": {
-		"vscode:prepublish": "npm run build",
+		"vscode:prepublish": "pnpm run build",
 		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./"
 	},
