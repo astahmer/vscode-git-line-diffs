@@ -1,4 +1,3 @@
-// A launch configuration that compiles the extension and then opens it inside a new window
 {
 	"version": "0.2.0",
 	"configurations": [
@@ -13,15 +12,12 @@
 			  "--profile-temp",
 			  "--skip-release-notes",
 			  "--skip-welcome",
-			  "--extensionDevelopmentPath=${workspaceFolder}",
-			//   "--folder-uri=${workspaceFolder}"
+			  "--extensionDevelopmentPath=${workspaceFolder}"
 			],
-			"stopOnEntry": false,
 			"sourceMaps": true,
 			"outFiles": [
 			  "${workspaceFolder}/out/**/*.js"
-			],
-			// "preLaunchTask": "npm: watch"
+			]
 		}
 	]
 }
