@@ -5,10 +5,12 @@
 	"version": "0.0.1",
 	"private": true,
 	"main": "./out/extension.js",
+	"repository": {
+		"url": "https://github.com/astahmer/vscode-git-line-diffs"
+	},
 	"engines": {
 		"vscode": "^1.95.0"
 	},
-	"icon": "assets/logo.png",
 	"activationEvents": ["onStartupFinished"],
 	"contributes": {
 		"commands": [
@@ -18,17 +20,32 @@
 			}
 		]
 	},
+	"files": ["out", "package.json", "LICENSE", "assets"],
 	"scripts": {
 		"vscode:prepublish": "pnpm run build",
 		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"fmt": "biome format --write",
-		"lint": "biome lint --write"
+		"lint": "biome lint --write",
+		"package": "pnpm vsce package",
+		"vsce:publish": "pnpm vsce publish"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/vscode": "^1.95.0",
 		"@vscode/vsce": "^3.2.1",
 		"typescript": "^5.7.2"
-	}
+	},
+	"icon": "assets/logo.png",
+	"categories": ["Programming Languages", "Visualization", "Other"],
+	"keywords": [
+		"git",
+		"line",
+		"diff",
+		"changes",
+		"addition",
+		"deletion",
+		"commit"
+	],
+	"license": "MIT"
 }

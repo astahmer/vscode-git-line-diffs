@@ -20,3 +20,5 @@ tsconfig.tsbuildinfo
 
 dist
 out
+
+*.vsix
