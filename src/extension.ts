@@ -148,7 +148,7 @@ export function activate(context: vscode.ExtensionContext) {
 			.map(
 				(change) => `
     <tr style="background-color: ${change.added + change.removed > 500 ? (isDarkMode ? "#444444" : "#ffcccc") : "transparent"};">
-      <td>${change.fileName}</td>
+      <td><a href="#">${change.fileName}</a></td>
       <td style="color: green;">+${change.added}</td>
       <td style="color: red;">-${change.removed}</td>
     </tr>

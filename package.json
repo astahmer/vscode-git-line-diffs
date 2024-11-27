@@ -2,7 +2,7 @@
 	"name": "vscode-git-line-diffs",
 	"publisher": "astahmer",
 	"displayName": "Git Line Diffs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": true,
 	"main": "./out/extension.js",
 	"repository": {
@@ -20,15 +20,15 @@
 			}
 		]
 	},
-	"files": ["out", "package.json", "LICENSE", "assets"],
+	"files": ["out", "package.json", "LICENSE", "assets", "README.md"],
 	"scripts": {
 		"vscode:prepublish": "pnpm run build",
 		"build": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"fmt": "biome format --write",
 		"lint": "biome lint --write",
-		"package": "pnpm vsce package",
-		"vsce:publish": "pnpm vsce publish"
+		"package": "pnpm vsce package --allow-unused-files-pattern",
+		"vsce:publish": "pnpm vsce publish --allow-unused-files-pattern"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
